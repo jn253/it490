@@ -1,8 +1,9 @@
 <?php
 include ("attom.php");
 //takes long/lat from attom api to make map
-function receiveMap($address){
+function receiveMap($zipcode){
 	//assigning variables to lat and long
+	$address=receiveCurl($zipcode);
 	$lat1=$address[0]['latitude'];
 	$lon1=$address[0]['longitude'];
 	$lat2=$address[1]['latitude'];
@@ -29,12 +30,7 @@ function receiveMap($address){
 	$image=file_get_contents("googleMap.png");
 	$data=base64_encode($image);
 	$json=json_encode($data);
-
+	return $json;
 }
-//hardcoded zip for testing
-$var=receiveCurl("07108");
-$var2=(receiveMap($var));
-print_r($var2);
-
-
+receiveMap("07109");
 ?>
