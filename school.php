@@ -5,7 +5,7 @@ function splitObj($prop){
 
     $name = $prop->School->InstitutionName;
     $latArr = $prop->School->geocodinglatitude;
-    $longArr = $prop->School->geocodinglongitude;
+    $lonArr = $prop->School->geocodinglongitude;
     $street = $prop->School->locationaddress;
     $city = $prop->School->locationcity;
     $state= $prop->School->stateabbrev;
