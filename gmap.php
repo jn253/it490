@@ -32,5 +32,6 @@ function receiveMap($zipcode){
 	$json=json_encode($data);
 	return $json;
 }
-receiveMap("07109");
+//testing
+//receiveMap("07109");
 ?>
